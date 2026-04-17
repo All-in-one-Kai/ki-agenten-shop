@@ -1,0 +1,868 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KI-Orchestrator für Unternehmen | ki-agenten.shop</title>
+<meta name="description" content="Wir bauen Ihre Master-KI, die Agenten, Tools und Prozesse zentral steuert. DSGVO-konform, skalierbar, für Mittelstand & Enterprise im DACH-Raum.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://ki-agenten.shop/">
+
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<!-- Schema.org structured data -->
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "name": "CULTURETEK PTE. LTD.", "legalName": "CULTURETEK PTE. LTD.", "alternateName": ["KI Agenten Shop", "AI Orchestration Platform"], "url": "https://ki-agenten.shop", "description": "KI-Orchestrierung für Unternehmen im DACH-Raum. Wir bauen Ihre Master-KI, die Agenten, Tools und Prozesse zentral steuert.", "foundingDate": "2024", "founder": {"@type": "Person", "name": "Kai", "jobTitle": "Founder & CEO", "email": "Kai.g.zimmer@gmail.com"}, "contactPoint": {"@type": "ContactPoint", "telephone": "+49-176-80273971", "contactType": "sales", "email": "Kai.g.zimmer@gmail.com", "availableLanguage": ["de", "en"]}, "areaServed": {"@type": "Place", "name": "DACH (Deutschland, Österreich, Schweiz)"}, "knowsAbout": ["KI-Orchestrierung", "KI-Agenten für Unternehmen", "Multi-Agenten-Systeme", "KI-Automatisierung", "KI-Governance", "Agentic AI", "DSGVO-konforme KI", "Human-in-the-Loop"]}</script>
+
+<style>
+/* ===== CSS VARIABLES (DARK PREMIUM) ===== */
+:root {
+    /* Primary Dark */
+    --midnight-navy: #0F1722;
+    --deep-ocean: #152435;
+    --slate-tech: #1A2F44;
+    
+    /* Signature Colors */
+    --electric-cyan: #22E7F0;
+    --signal-blue: #26B8F2;
+    --core-azure: #4A86FF;
+    --pulse-violet: #7A6CFF;
+    
+    /* Neutrals */
+    --soft-white: #F5F7FB;
+    --light-steel: #C8D3E0;
+    --slate-text: #8EA0B5;
+    
+    /* Typography */
+    --font-heading: 'Manrope', sans-serif;
+    --font-body: 'Inter', sans-serif;
+    
+    /* Transitions */
+    --transition-fast: 160ms ease;
+    --transition-medium: 220ms ease;
+}
+
+/* ===== RESET & BASE ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-body);
+    background: var(--midnight-navy);
+    color: var(--soft-white);
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* ===== CONTAINER ===== */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+/* ===== HEADER ===== */
+header.navbar {
+    background: rgba(15, 23, 34, 0.95);
+    backdrop-filter: blur(20px);
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 24px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.logo-img {
+    height: 46px;
+    width: auto;
+    border-radius: 6px;
+    object-fit: contain;
+    transition: transform var(--transition-medium);
+}
+
+.logo-img:hover {
+    transform: scale(1.05);
+}
+
+nav {
+    display: flex;
+    gap: 24px;
+    align-items: center;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--slate-text);
+    font-weight: 500;
+    font-size: 15px;
+    transition: color var(--transition-fast);
+}
+
+nav a:hover {
+    color: var(--electric-cyan);
+}
+
+nav .nav-cta {
+    background: var(--core-azure);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 12px;
+    font-size: 14px;
+    font-weight: 600;
+    transition: all var(--transition-medium);
+}
+
+nav .nav-cta:hover {
+    background: #3A76EF;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(74, 134, 255, 0.4);
+}
+
+/* Mobile Header */
+@media(max-width:768px) {
+    .logo-img { height: 34px; }
+    nav { gap: 10px; font-size: 13px; }
+}
+
+/* ===== HERO ===== */
+.hero {
+    padding: 100px 20px;
+    background: linear-gradient(135deg, var(--midnight-navy) 0%, var(--deep-ocean) 50%, var(--slate-tech) 100%);
+    color: var(--soft-white);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 800px;
+    height: 800px;
+    background: radial-gradient(circle, rgba(34, 231, 240, 0.15) 0%, rgba(74, 134, 255, 0.1) 50%, transparent 70%);
+    border-radius: 50%;
+    animation: heroGlow 6s ease-in-out infinite;
+    z-index: 0;
+}
+
+@keyframes heroGlow {
+    0%, 100% { opacity: 0.3; transform: translate(-50%, -50%) scale(1); }
+    50% { opacity: 0.6; transform: translate(-50%, -50%) scale(1.2); }
+}
+
+.hero .container {
+    position: relative;
+    z-index: 2;
+}
+
+.hero h1 {
+    font-family: var(--font-heading);
+    font-size: 52px;
+    font-weight: 800;
+    margin-bottom: 24px;
+    line-height: 1.1;
+    background: linear-gradient(135deg, var(--soft-white) 0%, var(--electric-cyan) 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero .subline {
+    font-size: 22px;
+    margin-bottom: 48px;
+    opacity: 0.9;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    color: var(--light-steel);
+}
+
+/* LOGO IM HERO */
+.hero-logo {
+    width: 200px;
+    height: auto;
+    margin: 30px auto 40px;
+    display: block;
+    position: relative;
+    z-index: 3;
+    border-radius: 16px;
+    box-shadow: 0 20px 60px rgba(34, 231, 240, 0.3);
+    animation: logoFloat 4s ease-in-out infinite;
+}
+
+@keyframes logoFloat {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    margin-bottom: 48px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    padding: 16px 32px;
+    border-radius: 14px;
+    text-decoration: none;
+    font-weight: 600;
+    display: inline-block;
+    font-size: 16px;
+    transition: all var(--transition-medium);
+    border: none;
+    cursor: pointer;
+}
+
+.btn-primary {
+    background: var(--core-azure);
+    color: white;
+    box-shadow: 0 6px 20px rgba(74, 134, 255, 0.4);
+}
+
+.btn-primary:hover {
+    background: #3A76EF;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(74, 134, 255, 0.5);
+}
+
+.btn-secondary {
+    background: transparent;
+    color: var(--soft-white);
+    border: 2px solid var(--slate-text);
+}
+
+.btn-secondary:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: var(--electric-cyan);
+    color: var(--electric-cyan);
+}
+
+.trust-row {
+    display: flex;
+    gap: 32px;
+    justify-content: center;
+    flex-wrap: wrap;
+    font-size: 15px;
+    opacity: 0.8;
+}
+
+.trust-row span {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 8px 16px;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: var(--light-steel);
+}
+
+/* Mobile Hero */
+@media(max-width:768px) {
+    .hero h1 { font-size: 36px; }
+    .hero .subline { font-size: 18px; }
+    .hero-logo { width: 150px; }
+    .cta-buttons { flex-direction: column; align-items: center; }
+}
+
+/* ===== SECTIONS ===== */
+section {
+    padding: 80px 20px;
+}
+
+section h2 {
+    font-family: var(--font-heading);
+    font-size: 42px;
+    font-weight: 700;
+    margin-bottom: 32px;
+    text-align: center;
+    color: var(--soft-white);
+}
+
+.section-alt {
+    background: var(--deep-ocean);
+}
+
+/* ===== ROI BANNER ===== */
+.roi-banner {
+    background: var(--slate-tech);
+    padding: 20px;
+    text-align: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.roi-banner a {
+    color: #ffd700;
+    font-size: 20px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: color var(--transition-fast);
+}
+
+.roi-banner a:hover {
+    color: var(--electric-cyan);
+}
+
+/* ===== BLOCKQUOTE ===== */
+blockquote {
+    background: rgba(34, 231, 240, 0.05);
+    border-left: 4px solid var(--electric-cyan);
+    padding: 24px 32px;
+    margin: 30px 0;
+    font-size: 20px;
+    font-style: italic;
+    border-radius: 0 12px 12px 0;
+    color: var(--light-steel);
+}
+
+/* ===== CARDS ===== */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin: 48px 0;
+}
+
+.card {
+    background: var(--slate-tech);
+    padding: 32px;
+    border-radius: 20px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    transition: all var(--transition-medium);
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 16px 48px rgba(34, 231, 240, 0.15);
+    border-color: var(--electric-cyan);
+}
+
+.card h3 {
+    font-size: 22px;
+    margin-bottom: 16px;
+    color: var(--electric-cyan);
+    font-weight: 600;
+}
+
+.card p {
+    color: var(--slate-text);
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+.card a {
+    color: var(--signal-blue);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.card a:hover {
+    color: var(--electric-cyan);
+}
+
+/* ===== HUB LINKS ===== */
+.hub-links {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin: 48px 0;
+}
+
+.hub-link {
+    display: block;
+    padding: 24px;
+    background: var(--slate-tech);
+    border: 2px solid rgba(255, 255, 255, 0.08);
+    border-radius: 16px;
+    text-decoration: none;
+    color: inherit;
+    transition: all var(--transition-medium);
+}
+
+.hub-link:hover {
+    border-color: var(--electric-cyan);
+    box-shadow: 0 8px 24px rgba(34, 231, 240, 0.2);
+    transform: translateY(-4px);
+}
+
+.hub-link h3 {
+    color: var(--electric-cyan);
+    margin-bottom: 8px;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.hub-link p {
+    font-size: 14px;
+    color: var(--slate-text);
+    margin: 0;
+}
+
+/* ===== STEPS ===== */
+.steps {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin: 48px 0;
+}
+
+.step {
+    background: var(--slate-tech);
+    padding: 28px;
+    border-radius: 16px;
+    border-left: 4px solid var(--electric-cyan);
+    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.15);
+    flex: 0 1 calc(33.333% - 14px);
+    min-width: 280px;
+    max-width: 380px;
+    transition: transform var(--transition-medium);
+}
+
+.step:hover {
+    transform: translateY(-6px);
+}
+
+.step .num {
+    display: inline-block;
+    width: 42px;
+    height: 42px;
+    background: var(--core-azure);
+    color: white;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 42px;
+    font-weight: 700;
+    margin-bottom: 16px;
+    font-size: 18px;
+}
+
+.step h3 {
+    color: var(--soft-white);
+    font-size: 20px;
+    margin-bottom: 12px;
+}
+
+.step p {
+    color: var(--slate-text);
+    line-height: 1.6;
+}
+
+.step a {
+    color: var(--signal-blue);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+/* ===== PACKAGES ===== */
+.packages {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin: 48px 0;
+}
+
+.pkg {
+    background: var(--slate-tech);
+    border: 2px solid rgba(255, 255, 255, 0.08);
+    padding: 40px;
+    border-radius: 20px;
+    text-align: center;
+    position: relative;
+    transition: all var(--transition-medium);
+}
+
+.pkg.featured {
+    border-color: var(--core-azure);
+    box-shadow: 0 8px 32px rgba(74, 134, 255, 0.2);
+    transform: scale(1.05);
+}
+
+.pkg:hover {
+    transform: translateY(-6px) scale(1.02);
+    box-shadow: 0 12px 40px rgba(34, 231, 240, 0.15);
+}
+
+.pkg h3 {
+    font-size: 24px;
+    margin-bottom: 16px;
+    color: var(--electric-cyan);
+}
+
+.pkg .price {
+    font-size: 18px;
+    color: var(--signal-blue);
+    font-weight: 700;
+    margin-bottom: 24px;
+}
+
+.pkg ul {
+    text-align: left;
+    list-style: none;
+    margin-bottom: 32px;
+    color: var(--slate-text);
+}
+
+.pkg li {
+    padding: 6px 0;
+    font-size: 15px;
+    position: relative;
+    padding-left: 20px;
+}
+
+.pkg li::before {
+    content: "✓ ";
+    position: absolute;
+    left: 0;
+    color: var(--electric-cyan);
+    font-weight: 700;
+}
+
+.badge {
+    position: absolute;
+    top: -16px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--core-azure);
+    color: white;
+    padding: 8px 20px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+/* ===== FINAL CTA ===== */
+.final-cta {
+    background: linear-gradient(135deg, var(--core-azure), var(--pulse-violet));
+    color: var(--soft-white);
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.final-cta h2 {
+    color: white;
+    font-size: 42px;
+    margin-bottom: 20px;
+}
+
+.final-cta p {
+    font-size: 18px;
+    opacity: 0.95;
+    margin-bottom: 32px;
+    color: white;
+}
+
+/* ===== FOOTER ===== */
+footer {
+    background: var(--slate-tech);
+    color: var(--slate-text);
+    padding: 64px 20px 32px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+footer h4 {
+    color: var(--soft-white);
+    margin-bottom: 16px;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+footer a {
+    color: var(--slate-text);
+    text-decoration: none;
+    display: block;
+    margin-bottom: 8px;
+    font-size: 14px;
+    transition: color var(--transition-fast);
+}
+
+footer a:hover {
+    color: var(--electric-cyan);
+}
+
+.copyright {
+    text-align: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 24px;
+    font-size: 13px;
+    color: var(--slate-text);
+}
+
+.copyright a {
+    color: var(--slate-text);
+    text-decoration: none;
+}
+
+.copyright a:hover {
+    color: var(--electric-cyan);
+}
+
+/* ===== MOBILE RESPONSIVE ===== */
+@media(max-width:900px) {
+    .hub-links, .cards, .packages { grid-template-columns: repeat(2, 1fr); }
+    .step { flex: 0 1 calc(50% - 10px); min-width: auto; }
+}
+
+@media(max-width:600px) {
+    .hub-links, .cards, .packages { grid-template-columns: 1fr; }
+    .step { flex: 0 1 100%; }
+    .pkg.featured { transform: none; }
+}
+
+/* ===== WHATSAPP FLOAT ===== */
+.whatsapp-float {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    z-index: 999;
+    background: #25D366;
+    color: white;
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+    transition: transform var(--transition-medium);
+    text-decoration: none;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.1);
+}
+</style>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-WMVRTZM5NJ"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-WMVRTZM5NJ");</script>
+</head>
+<body>
+
+<header class="navbar"><div class="container">
+<a href="/" class="logo"><img src="assets/logo-ki-agenten.jpg" alt="KI-Agenten.shop Logo" class="logo-img"></a>
+<nav>
+<a href="/ki-orchestrierung/">Orchestrierung</a>
+<a href="/ki-agenten-fuer-unternehmen/">KI-Agenten</a>
+<a href="/build-your-orchestrator.html">Shop</a>
+<a href="/ki-governance-dsgvo/">Governance</a>
+<a href="/ki-automatisierung-guide/">Wissen</a>
+<a href="/blog/">Blog</a>
+<a href="/roi-rechner/" style="color:var(--core-azure);font-weight:700">🧮 ROI-Rechner</a>
+<a href="/ueber-uns/">Über Uns</a>
+<a href="/potenzialanalyse/" class="nav-cta">Potenzialanalyse</a>
+</nav>
+</div></header>
+
+<section class="hero"><div class="container">
+<h1>KI-Orchestrator für Unternehmen</h1>
+<img src="assets/logo-ki-agenten.jpg" alt="KI-Agenten.shop" class="hero-logo">
+<p class="subline">Wir bauen Ihre Master-KI, die Agenten, Tools und Prozesse zentral steuert — DSGVO-konform, skalierbar und messbar.</p>
+
+<div class="cta-buttons">
+<a href="/potenzialanalyse/" class="btn btn-primary">Kostenlose KI-Potenzialanalyse</a>
+<a href="/build-your-orchestrator.html" class="btn btn-secondary">Shop durchstöbern</a>
+<a href="/roi-rechner/" class="btn btn-secondary" style="border-color:#ffd700;color:#ffd700">🧮 ROI in 60 Sekunden berechnen</a>
+</div>
+<div class="trust-row">
+<span>✓ Für Mittelstand & Enterprise</span>
+<span>✓ DSGVO-konform</span>
+<span>✓ MVP in 4–8 Wochen</span>
+<span>✓ n8n / CRM / ERP integriert</span>
+</div>
+</div></section>
+
+<section class="roi-banner">
+<a href="/roi-rechner/">🧮 NEU: KI-ROI-Rechner — Berechnen Sie Ihr Einsparpotenzial in 60 Sekunden →</a>
+<br><br>
+<a href="/ki-agenten-implementierung-kosten-roi-2026/" style="color:var(--light-steel);font-size:16px;font-weight:500;text-decoration:underline">💰 Was kosten KI-Agenten wirklich? Transparente Preisübersicht 2026 →</a>
+</section>
+
+<section>
+<div class="container">
+<h2>Viele Teams nutzen KI. Die wenigsten orchestrieren sie.</h2>
+<blockquote>KI ohne Strategie ist wie ein Orchester ohne Dirigent: Viele Instrumente. Viel Lärm. Wenig Musik.</blockquote>
+<p style="font-size:17px;max-width:800px;margin:0 auto;text-align:center;color:var(--light-steel)">Ein <a href="/was-ist-ki-orchestrator/" style="color:var(--signal-blue);font-weight:600">KI-Orchestrator</a> koordiniert mehrere <a href="/ki-agenten-fuer-unternehmen/" style="color:var(--signal-blue);font-weight:600">KI-Agenten</a> und Tools, verwaltet Kontext und Wissen und sorgt dafür, dass Ergebnisse zuverlässig in Ihren Systemen ankommen.</p>
+</div>
+</section>
+
+<section class="section-alt"><div class="container">
+<h2>Ihr KI-Betriebssystem</h2>
+<div class="cards">
+<div class="card"><h3>🎯 Routing & Aufgabenverteilung</h3><p>Die Master-KI wählt je nach Anfrage den richtigen Agenten, das passende Modell und die benötigten Tools. Automatisch. In Echtzeit. → <a href="/ki-orchestrator-architektur/">Architektur verstehen</a></p></div>
+<div class="card"><h3>⚡ KI-Workflow-Automatisierung</h3><p>Von Lead → Angebot → Follow-up. Von Ticket → Lösung → Doku. Ende-zu-Ende <a href="/ki-automatisierung-mittelstand/">KI-Automatisierung</a> mit Freigabeschritte und nahtloser Integration.</p></div>
+<div class="card"><h3>🛡️ Governance & Kontrolle</h3><p>Rollen, Datenrechte, Guardrails, Audit Logs, Kostenlimits. <a href="/ki-governance-dsgvo/">DSGVO-konforme KI</a>, die man verantworten kann.</p></div>
+</div>
+</div></section>
+
+<section><div class="container">
+<h2>KI-Agenten für jede Abteilung</h2>
+<div class="hub-links">
+<a href="/ki-agenten-im-vertrieb/" class="hub-link"><h3>🎯 Vertrieb</h3><p>Lead-Scoring, Angebotsautomatisierung, CRM-Enrichment, Follow-ups</p></a>
+<a href="/ki-agenten-im-kundenservice/" class="hub-link"><h3>🛎️ Kundenservice</h3><p>Ticket-Triage, automatische Antworten, Eskalationslogik</p></a>
+<a href="/ki-agenten-operations/" class="hub-link"><h3>⚙️ Operations</h3><p>Prozessüberwachung, Anomalieerkennung, Report-Generierung</p></a>
+<a href="/ki-agenten-backoffice/" class="hub-link"><h3>📋 Backoffice</h3><p>Rechnungsprüfung, Dokumentenverarbeitung, HR-Prozesse</p></a>
+<a href="/ki-agenten-finance/" class="hub-link"><h3>💰 Finance</h3><p>Zahlungsabgleich, Budget-Monitoring, Compliance-Checks</p></a>
+<a href="/ki-agenten-compliance/" class="hub-link"><h3>🛡️ Compliance</h3><p>DSGVO-Monitoring, Vertragsprüfung, EU AI Act</p></a>
+</div>
+</div></section>
+
+<section class="section-alt"><div class="container">
+<h2>So bauen wir Ihre Master-KI</h2>
+<div class="steps">
+<div class="step"><span class="num">1</span><h3>Strategie & Zielbild</h3><p>KPIs, Prozesse, Use-Case Priorisierung, Daten- & Risiko-Check.</p></div>
+<div class="step"><span class="num">2</span><h3>Orchestrator-Blueprint</h3><p>Agentenrollen, Tool-Stack, Datenquellen, Freigaben, <a href="/ki-orchestrator-architektur/">Architektur</a>.</p></div>
+<div class="step"><span class="num">3</span><h3>MVP in Produktion</h3><p>1–3 Kernprozesse live. Nicht als Demo, sondern produktiv.</p></div>
+<div class="step"><span class="num">4</span><h3>Integration</h3><p>CRM, ERP, E-Mail, Slack + <a href="/n8n-ki-agenten/">n8n/Make</a> angebunden.</p></div>
+<div class="step"><span class="num">5</span><h3>Optimierung</h3><p><a href="/monitoring-ki-agenten/">Monitoring</a>, Prompt-Tuning, <a href="/kostenkontrolle-ki-workflows/">Kostenkontrolle</a>, Skalierung.</p></div>
+</div>
+</div></section>
+
+<section><div class="container">
+<h2>Wissen: GEO Knowledge Hub</h2>
+<div class="hub-links">
+<a href="/was-ist-ki-orchestrator/" class="hub-link"><h3>📖 Was ist ein KI-Orchestrator?</h3><p>Definition, Aufgaben, Architektur — klar erklärt</p></a>
+<a href="/ki-agenten-vs-chatbots/" class="hub-link"><h3>⚖️ KI-Agenten vs. Chatbots</h3><p>Unterschiede, Einsatz, Entscheidungshilfe</p></a>
+<a href="/multi-agenten-systeme/" class="hub-link"><h3>🔗 Multi-Agenten-Systeme</h3><p>Architektur, Frameworks, Enterprise-Deployment</p></a>
+<a href="/roi-ki-agenten-berechnen/" class="hub-link"><h3>📊 ROI von KI-Agenten berechnen</h3><p>Formeln, Benchmarks, Beispielrechnungen</p></a>
+<a href="/fehler-einfuehrung-ki-agenten/" class="hub-link"><h3>⚠️ 7 Fehler bei KI-Einführung</h3><p>Warum 95% keinen ROI sehen — und wie es besser geht</p></a>
+<a href="/ki-automatisierung-guide/" class="hub-link"><h3>🗺️ KI-Automatisierung Guide</h3><p>Vom ersten Use Case bis zur Skalierung</p></a>
+<a href="/ki-orchestrierung-vs-einzeltools/" class="hub-link"><h3>🔗 Orchestrierung vs. Einzeltools</h3><p>Warum zentrale Steuerung besser funktioniert</p></a>
+<a href="/agentic-ai-vs-workflow-automation/" class="hub-link"><h3>🤖 Agentic AI vs. Automation</h3><p>Der Unterschied zwischen Regeln und Intelligenz</p></a>
+<a href="/ki-orchestrator-vs-rpa/" class="hub-link"><h3>⚡ Orchestrator vs. RPA</h3><p>KI-gesteuerte Prozesse vs. starre Automatisierung</p></a>
+<a href="/n8n-vs-make-ki-agenten/" class="hub-link"><h3>🔌 n8n vs. Make für KI-Agenten</h3><p>Workflow-Tools im KI-Kontext verglichen</p></a>
+<a href="/ki-agentur-vs-inhouse-team/" class="hub-link"><h3>🏢 Agentur vs. Inhouse</h3><p>Externe Expertise vs. internes Know-how</p></a>
+<a href="/kostenkontrolle-ki-workflows/" class="hub-link"><h3>💰 Kostenkontrolle KI</h3><p>Budgets, Limits und Monitoring für KI-Systeme</p></a>
+<a href="/monitoring-ki-agenten/" class="hub-link"><h3>📊 Monitoring KI-Agenten</h3><p>Überwachung, Logs und Performance-Metriken</p></a>
+<a href="/agentic-ai-beratung/" class="hub-link"><h3>🎯 Agentic AI Beratung</h3><p>Strategische KI-Implementierung für Unternehmen</p></a>
+<a href="/ki-orchestrierung/" class="hub-link"><h3>🎼 KI-Orchestrierung Einführung</h3><p>Von der Planung bis zur produktiven Nutzung</p></a>
+<a href="/ki-automatisierung-mittelstand/" class="hub-link"><h3>🏭 KI-Automatisierung Mittelstand</h3><p>Praxisnahe Lösungen für mittelständische Unternehmen</p></a>
+<a href="/ki-agenten-implementierung-kosten-roi-2026/" class="hub-link"><h3>💡 KI Implementierung & ROI</h3><p>Kosten, Nutzen und ROI-Berechnung für 2026</p></a>
+<a href="/n8n-ki-agenten/" class="hub-link"><h3>⚙️ n8n & KI-Agenten</h3><p>Workflow-Automatisierung mit intelligenten Agenten</p></a>
+<a href="/ki-orchestrator-architektur/" class="hub-link"><h3>🏗️ KI-Orchestrator Architektur</h3><p>Technische Grundlagen und Design-Patterns</p></a>
+</div>
+</div></section>
+
+<section class="section-alt"><div class="container">
+<h2>Drei Wege zu Ihrer Master-KI</h2>
+<div class="packages">
+<div class="pkg"><h3>🚀 Kickstart (MVP)</h3><p class="price">Auf Anfrage</p><ul>
+<li>Strategie-Workshop + Use-Case Auswahl</li>
+<li>Orchestrator-Blueprint</li>
+<li>MVP mit 1–3 Prozessen live</li>
+<li>E-Mail & WhatsApp Support</li>
+</ul><a href="https://calendly.com/kai-ceg" class="btn btn-secondary" target="_blank">Anfragen</a></div>
+<div class="pkg featured"><span class="badge">Empfohlen</span><h3>⚡ Scale</h3><p class="price">Auf Anfrage</p><ul>
+<li>Alles aus Kickstart</li>
+<li>Unbegrenzte Agentenrollen</li>
+<li>Monitoring & Qualitätsframework</li>
+<li>Kosten- und Governance-Setup</li>
+<li>Erweiterte Integrationen</li>
+<li>Priority Support</li>
+</ul><a href="https://calendly.com/kai-ceg" class="btn btn-primary" target="_blank">Anfragen</a></div>
+<div class="pkg"><h3>🏢 Enterprise</h3><p class="price">Auf Anfrage</p><ul>
+<li>Alles aus Scale</li>
+<li>SSO/RBAC, Logging, Policies</li>
+<li>Custom Connectors</li>
+<li>Dedicated Environments</li>
+<li>SLA & Dedicated Support</li>
+</ul><a href="https://calendly.com/kai-ceg" class="btn btn-secondary" target="_blank">Anfragen</a></div>
+</div>
+</div></section>
+
+<section><div class="container">
+<h2>Ergebnisse aus der Praxis</h2>
+<div class="cards">
+<a href="/case-study-vertrieb/" class="card" style="text-decoration:none;color:inherit"><h3>📈 Case Study: Vertrieb</h3><p>Lead-Response von 24h auf 2h. +35% mehr Deals. → Lesen</p></a>
+<a href="/case-study-support/" class="card" style="text-decoration:none;color:inherit"><h3>🛎️ Case Study: Support</h3><p>50% der Tier-1-Tickets automatisch gelöst. CSAT +12 Punkte. → Lesen</p></a>
+<a href="/case-study-operations/" class="card" style="text-decoration:none;color:inherit"><h3>⚙️ Case Study: Operations</h3><p>60% weniger manuelle Reporting-Arbeit. 3 Agenten, 5 Systeme. → Lesen</p></a>
+</div>
+</div></section>
+
+<section class="final-cta"><div class="container">
+<h2>Bereit für Ihre Master-KI?</h2>
+<p>Kostenlose Potenzialanalyse — wir identifizieren Ihre Top-3 KI-Use-Cases in 15 Minuten.</p>
+<div class="cta-buttons">
+<a href="/potenzialanalyse/" class="btn btn-primary">Kostenlose KI-Potenzialanalyse</a>
+<a href="https://calendly.com/kai-ceg" class="btn btn-secondary" target="_blank">Termin buchen (15 Min)</a>
+</div>
+</div></section>
+
+<footer><div class="container">
+<div class="footer-grid">
+<div><h4>KI-Agenten.shop</h4><p style="font-size:14px;color:var(--slate-text)">KI-Orchestrierung für Unternehmen im DACH-Raum. Wir bauen Ihre Master-KI.</p></div>
+<div><h4>Leistungen</h4>
+<a href="/ki-orchestrierung/">KI-Orchestrierung</a>
+<a href="/ki-agenten-fuer-unternehmen/">KI-Agenten</a>
+<a href="/multi-agenten-systeme/">Multi-Agenten-Systeme</a>
+<a href="/agentic-ai-beratung/">Agentic AI Beratung</a>
+<a href="/ki-governance-dsgvo/">KI-Governance</a>
+<a href="/ki-optimizer-agentur/">KI-Optimierung</a></div>
+<div><h4>Use Cases</h4>
+<a href="/ki-agenten-im-vertrieb/">Vertrieb</a>
+<a href="/ki-agenten-im-kundenservice/">Kundenservice</a>
+<a href="/ki-agenten-operations/">Operations</a>
+<a href="/ki-agenten-backoffice/">Backoffice</a>
+<a href="/ki-agenten-finance/">Finance</a>
+<a href="/ki-agenten-compliance/">Compliance</a></div>
+<div><h4>Wissen</h4>
+<a href="/was-ist-ki-orchestrator/">Was ist ein KI-Orchestrator?</a>
+<a href="/ki-agenten-vs-chatbots/">KI-Agenten vs. Chatbots</a>
+<a href="/roi-ki-agenten-berechnen/">ROI berechnen</a>
+<a href="/ki-automatisierung-guide/">Automatisierung Guide</a>
+<a href="/fehler-einfuehrung-ki-agenten/">7 Fehler vermeiden</a>
+<a href="/ki-glossar/">KI-Glossar</a></div>
+<div><h4>Vergleiche</h4>
+<a href="/ki-orchestrierung-vs-einzeltools/">Orchestrierung vs. Einzeltools</a>
+<a href="/agentic-ai-vs-workflow-automation/">Agentic AI vs. Automation</a>
+<a href="/ki-orchestrator-vs-rpa/">Orchestrator vs. RPA</a>
+<a href="/n8n-vs-make-ki-agenten/">n8n vs. Make</a>
+<a href="/ki-agentur-vs-inhouse-team/">Agentur vs. Inhouse</a></div>
+<div><h4>Tools & Rechner</h4>
+<a href="/potenzialanalyse/">Potenzialanalyse</a>
+<a href="/roi-rechner/">ROI-Rechner</a>
+<a href="/checkliste-ki-orchestrierung/">Checkliste</a>
+<a href="/blog/">Blog</a>
+<a href="/ueber-uns/">Über uns</a>
+<a href="/kontakt/">Kontakt</a></div>
+</div>
+<p class="copyright">&copy; 2026 KI-Agenten.shop — Alle Rechte vorbehalten. | <a href="/impressum/">Impressum</a> | <a href="/datenschutz/">Datenschutz</a></p>
+</div></footer>
+
+<!-- WhatsApp Float -->
+<a href="https://wa.me/4917680273971?text=Hallo%2C%20ich%20interessiere%20mich%20f%C3%BCr%20KI-Orchestrierung." target="_blank" rel="noopener" class="whatsapp-float">
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#fff" viewBox="0 0 24 24">
+<path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+</svg>
+</a>
+</body>
+</html>

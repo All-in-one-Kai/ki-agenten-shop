@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ROI-Rechner für KI-Agenten | ki-agenten.shop</title>
+<meta name="description" content="Berechnen Sie in 60 Sekunden den ROI Ihrer KI-Orchestrierung. Kosteneinsparung, Zeitersparnis und Amortisation — individuell für Ihr Unternehmen.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://ki-agenten.shop/roi-rechner/">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-WMVRTZM5NJ"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-WMVRTZM5NJ");</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://ki-agenten.shop/"},{"@type":"ListItem","position":2,"name":"ROI-Rechner","item":"https://ki-agenten.shop/roi-rechner/"}]}</script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:"Inter",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:#F5F7FB;line-height:1.7;background:#0F1722}
+.container{max-width:900px;margin:0 auto;padding:0 24px}
+header.navbar{background:rgba(15,23,34,0.95);backdrop-filter:blur(12px);border-bottom:1px solid rgba(255,255,255,0.08);position:sticky;top:0;z-index:100}
+header .container{display:flex;justify-content:space-between;align-items:center;padding:14px 24px;max-width:1200px;margin:0 auto}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none}
+.logo-img{height:52px;width:auto;border-radius:6px;object-fit:contain;filter:brightness(1.1) contrast(1.05);transition:filter 0.2s;image-rendering:auto}
+.logo-text{display:none}
+nav{display:flex;gap:20px;align-items:center}
+nav a{text-decoration:none;color:#F0F3F9;font-weight:500;font-size:15px}
+nav a:hover{color:#22E7F0}
+nav .nav-cta{background:#4A86FF;color:#fff;padding:10px 22px;border-radius:10px;font-weight:600;font-size:14px}
+@media(max-width:768px){nav{gap:8px;font-size:13px;flex-wrap:wrap}.logo-img{height:30px}.logo-text{font-size:15px}}
+.hero{padding:50px 20px;background:linear-gradient(135deg,#0F1722,#152435,#1A2F44);color:#fff;text-align:center}
+.hero h1{font-size:38px;font-family:"Manrope",sans-serif;margin-bottom:12px}
+.hero p{font-size:18px;opacity:.95}
+.calc{padding:48px 20px}
+.calc-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px}
+@media(max-width:768px){.calc-grid{grid-template-columns:1fr}}
+.inputs label{display:block;font-weight:600;margin:20px 0 6px;font-size:15px}
+.inputs input,.inputs select{width:100%;padding:12px;border:2px solid #e0e0e0;border-radius:6px;font-size:16px;transition:border .2s}
+.inputs input:focus,.inputs select:focus{border-color:#4A86FF;outline:none}
+.inputs small{color:#D0DAE8;font-size:13px}
+.results{background:#152435;border-radius:12px;padding:32px;position:sticky;top:80px}
+.results h2{font-size:24px;margin-bottom:20px;color:#4A86FF}
+.result-item{display:flex;justify-content:space-between;padding:14px 0;border-bottom:1px solid rgba(255,255,255,0.12)}
+.result-item:last-child{border:none}
+.result-label{font-size:15px;color:#D0DAE8}
+.result-value{font-size:20px;font-weight:700;color:#F5F7FB}
+.result-value.green{color:#10b981}
+.result-value.blue{color:#4A86FF}
+.roi-highlight{background:linear-gradient(135deg,#0F1722,#152435,#1A2F44);color:#fff;border-radius:8px;padding:24px;text-align:center;margin-top:20px}
+.roi-highlight .big{font-size:48px;font-weight:800}
+.roi-highlight p{opacity:.9;margin-top:4px}
+.cta-box{text-align:center;margin-top:24px}
+.btn{display:inline-block;padding:14px 28px;background:#4A86FF;color:#fff;text-decoration:none;border-radius:6px;font-weight:600;font-size:16px}
+.btn:hover{background:#3A76EF}
+.info{background:rgba(74,134,255,0.08);border-left:4px solid #22E7F0;padding:16px 20px;margin:30px 0;border-radius:0 8px 8px 0;font-size:15px}
+input,select,textarea{background:#152435!important;color:#F5F7FB!important;border:1px solid rgba(255,255,255,0.25)!important;border-radius:8px;padding:12px 16px;font-size:16px;font-family:inherit;transition:border-color 0.2s}input:focus,select:focus,textarea:focus{border-color:#22E7F0!important;outline:none;box-shadow:0 0 0 3px rgba(34,231,240,0.15)}select{appearance:none;-webkit-appearance:none}::placeholder{color:#D0DAE8!important}::-webkit-scrollbar{width:8px}::-webkit-scrollbar-track{background:#0F1722}::-webkit-scrollbar-thumb{background:#2A3B52;border-radius:4px}::-webkit-scrollbar-thumb:hover{background:#3A4B62}.menu-toggle{display:none;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.25);color:#F5F7FB;font-size:28px;padding:6px 14px;border-radius:6px;cursor:pointer}@media(max-width:768px){.menu-toggle{display:block}header nav{display:none;position:absolute;top:100%;left:0;right:0;background:#0F1722;border-top:1px solid rgba(255,255,255,0.08);padding:16px 24px;flex-direction:column;gap:12px;box-shadow:0 8px 24px rgba(0,0,0,0.4)}header nav.open{display:flex}header nav a{font-size:16px;padding:8px 0;border-bottom:1px solid rgba(255,255,255,0.06)}header .container{flex-wrap:nowrap}}@media(max-width:768px){[style*="position:fixed"][style*="bottom:24px"]{width:48px!important;height:48px!important;bottom:16px!important;right:16px!important}}/* wa-mobile-fix */a:focus-visible,button:focus-visible,.btn:focus-visible{outline:2px solid #22E7F0;outline-offset:2px;border-radius:4px}.content a:hover{text-decoration-color:#22E7F0;color:#4AE8F0}</style>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@700;800&display=swap" rel="stylesheet"><meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"><meta http-equiv="Pragma" content="no-cache"><meta http-equiv="Expires" content="0"></head>
+<body>
+<header class="navbar"><div class="container">
+<a href="/" class="logo"><img src="/assets/logo-ki-agenten.jpg" alt="KI-Agenten.shop Logo" class="logo-img"></a>
+<nav>
+<a href="/ki-orchestrierung/">Orchestrierung</a>
+<a href="/ki-agenten-fuer-unternehmen/">KI-Agenten</a>
+<a href="/build-your-orchestrator.html">Shop</a>
+<a href="/ki-governance-dsgvo/">Governance</a>
+<a href="/ki-automatisierung-guide/">Wissen</a>
+<a href="/blog/">Blog</a>
+<a href="/roi-rechner/" style="color:var(--core-azure);font-weight:700">🧮 ROI-Rechner</a>
+<a href="/ueber-uns/">Über Uns</a>
+<a href="/potenzialanalyse/" class="nav-cta">Potenzialanalyse</a>
+</nav>
+</div></header>
+
+<section class="hero"><div class="container">
+<h1>ROI-Rechner für KI-Agenten</h1>
+<p>Berechnen Sie in 60 Sekunden, was KI-Orchestrierung für Ihr Unternehmen bringt.</p>
+</div></section>
+
+<section class="calc"><div class="container">
+<div class="calc-grid">
+<div class="inputs">
+<h2 style="font-size:22px;margin-bottom:8px">Ihre Daten</h2>
+<p style="color:#D0DAE8;margin-bottom:16px;font-size:15px">Alle Angaben sind Schätzungen — der Rechner zeigt konservative Werte.</p>
+
+<label>Anzahl Mitarbeiter im betroffenen Bereich</label>
+<input type="number" id="employees" value="10" min="1" max="10000" onchange="calc()" oninput="calc()">
+<small>Wie viele Personen arbeiten in den Prozessen, die automatisiert werden sollen?</small>
+
+<label>Durchschnittliches Jahresgehalt (brutto, €)</label>
+<input type="number" id="salary" value="55000" min="20000" max="200000" step="1000" onchange="calc()" oninput="calc()">
+
+<label>Anteil repetitiver Aufgaben (%)</label>
+<input type="range" id="repetitive" value="35" min="10" max="80" onchange="calc()" oninput="calc()">
+<small id="repLabel">35% der Arbeitszeit sind repetitive Aufgaben</small>
+
+<label>Erwartete Automatisierungsrate (%)</label>
+<input type="range" id="autoRate" value="50" min="20" max="80" onchange="calc()" oninput="calc()">
+<small id="autoLabel">50% davon können KI-Agenten übernehmen</small>
+
+<label>Geschätzte Implementierungskosten (€)</label>
+<input type="number" id="implCost" value="25000" min="5000" max="500000" step="5000" onchange="calc()" oninput="calc()">
+<small>MVP-Setup inkl. Konfiguration, Integration, Testing</small>
+
+<label>Monatliche Betriebskosten KI (€)</label>
+<input type="number" id="opCost" value="500" min="100" max="20000" step="100" onchange="calc()" oninput="calc()">
+<small>API-Kosten, Hosting, Monitoring, Support</small>
+</div>
+
+<div class="results" id="results">
+<h2>Ihr KI-ROI</h2>
+<div class="result-item"><span class="result-label">Jährliche Personalkosten (Bereich)</span><span class="result-value" id="r-total">€550.000</span></div>
+<div class="result-item"><span class="result-label">Davon repetitiv</span><span class="result-value" id="r-repetitive">€192.500</span></div>
+<div class="result-item"><span class="result-label">Automatisierbar durch KI</span><span class="result-value green" id="r-savings">€96.250</span></div>
+<div class="result-item"><span class="result-label">Implementierung (einmalig)</span><span class="result-value" id="r-impl">€25.000</span></div>
+<div class="result-item"><span class="result-label">Betriebskosten KI (Jahr)</span><span class="result-value" id="r-ops">€6.000</span></div>
+<div class="result-item"><span class="result-label">Netto-Ersparnis (Jahr 1)</span><span class="result-value green" id="r-net">€65.250</span></div>
+<div class="result-item"><span class="result-label">Amortisation</span><span class="result-value blue" id="r-payback">3,1 Monate</span></div>
+<div class="roi-highlight">
+<div class="big" id="r-roi">261%</div>
+<p>Return on Investment (3 Jahre)</p>
+</div>
+<div class="cta-box">
+<p style="margin-bottom:12px;font-size:15px;color:#D0DAE8">Möchten Sie wissen, welche Prozesse den höchsten ROI haben?</p>
+<a href="/potenzialanalyse/" class="btn">Kostenlose Potenzialanalyse</a>
+</div>
+</div>
+</div>
+
+<div class="info">
+<strong>Hinweis:</strong> Diese Berechnung zeigt konservative Schätzungen. Der tatsächliche ROI hängt von Ihren spezifischen Prozessen ab. Faktoren wie Fehlerreduktion, schnellere Durchlaufzeiten und Mitarbeiterzufriedenheit sind nicht eingerechnet. <a href="/roi-ki-agenten-berechnen/" style="color:#4A86FF">Mehr zur ROI-Berechnung →</a>
+</div>
+</div></section>
+
+<section style="background:linear-gradient(135deg,#0F1722,#152435,#1A2F44);padding:60px 20px;text-align:center;color:#fff">
+<div style="max-width:800px;margin:0 auto">
+<h2 style="color:#fff;font-size:32px;margin-bottom:16px">Bereit für Ihre Master-KI?</h2>
+<p style="font-size:18px;opacity:.95;margin-bottom:28px">Kostenlose Potenzialanalyse — wir identifizieren Ihre Top-3 KI-Use-Cases in 15 Minuten.</p>
+<a href="/potenzialanalyse/" style="padding:14px 32px;border-radius:6px;text-decoration:none;font-weight:600;background:#1A2F44;color:#4A86FF;font-size:16px">Kostenlose KI-Potenzialanalyse</a>
+</div></section>
+
+<footer style="background:#0a0f18;color:#ccc;padding:48px 20px 24px">
+<div style="max-width:1200px;margin:0 auto">
+<p style="text-align:center;font-size:13px;color:#D0DAE8">&copy; 2026 KI-Agenten.shop | <a href="/impressum/" style="color:#4A86FF;text-decoration:none">Impressum</a> | <a href="/datenschutz/" style="color:#4A86FF;text-decoration:none">Datenschutz</a></p>
+</div></footer>
+
+<script>
+function fmt(n){return n.toLocaleString("de-DE",{style:"currency",currency:"EUR",maximumFractionDigits:0})}
+function calc(){
+  var emp=+document.getElementById("employees").value;
+  var sal=+document.getElementById("salary").value;
+  var rep=+document.getElementById("repetitive").value;
+  var aut=+document.getElementById("autoRate").value;
+  var impl=+document.getElementById("implCost").value;
+  var ops=+document.getElementById("opCost").value;
+  
+  document.getElementById("repLabel").textContent=rep+"% der Arbeitszeit sind repetitive Aufgaben";
+  document.getElementById("autoLabel").textContent=aut+"% davon können KI-Agenten übernehmen";
+  
+  var total=emp*sal;
+  var repetitive=total*(rep/100);
+  var savings=repetitive*(aut/100);
+  var opsYear=ops*12;
+  var netY1=savings-impl-opsYear;
+  var paybackMonths=savings>0?(impl/(savings/12)):999;
+  var roi3y=impl>0?((savings*3-impl-opsYear*3)/(impl+opsYear*3)*100):0;
+  
+  document.getElementById("r-total").textContent=fmt(total);
+  document.getElementById("r-repetitive").textContent=fmt(repetitive);
+  document.getElementById("r-savings").textContent=fmt(savings)+"/Jahr";
+  document.getElementById("r-impl").textContent=fmt(impl);
+  document.getElementById("r-ops").textContent=fmt(opsYear)+"/Jahr";
+  document.getElementById("r-net").textContent=fmt(netY1);
+  document.getElementById("r-net").className="result-value "+(netY1>=0?"green":"");
+  document.getElementById("r-payback").textContent=paybackMonths<24?paybackMonths.toFixed(1).replace(".",",")+" Monate":">"+Math.round(paybackMonths/12)+" Jahre";
+  document.getElementById("r-roi").textContent=Math.round(roi3y)+"%";
+  
+  gtag("event","roi_calculation",{employees:emp,salary:sal,repetitive_pct:rep,automation_pct:aut,estimated_savings:Math.round(savings),roi_3y:Math.round(roi3y)});
+}
+calc();
+</script>
+<!-- WhatsApp Float -->
+<a href="https://wa.me/4917680273971?text=Hallo%2C%20ich%20interessiere%20mich%20f%C3%BCr%20KI-Orchestrierung." target="_blank" rel="noopener" style="position:fixed;bottom:24px;right:24px;z-index:999;background:rgba(37,211,102,0.85);color:#fff;width:60px;height:60px;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 12px rgba(0,0,0,.25);transition:transform .2s;text-decoration:none" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#fff" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a>
+</body></html>
