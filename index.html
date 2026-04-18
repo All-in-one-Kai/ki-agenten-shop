@@ -408,6 +408,9 @@ blockquote {
 }
 
 .hub-link h3 {
+    display: flex;
+    align-items: center;
+    gap: 8px;
     color: var(--electric-cyan);
     margin-bottom: 8px;
     font-size: 18px;
@@ -660,6 +663,30 @@ footer a:hover {
 .whatsapp-float:hover {
     transform: scale(1.1);
 }
+
+/* ===== SVG ICONS (CULA-62) ===== */
+.dept-icon {
+    width: 26px;
+    height: 26px;
+    color: var(--electric-cyan);
+    flex-shrink: 0;
+}
+.step-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    background: var(--core-azure);
+    border-radius: 50%;
+    margin-bottom: 16px;
+    flex-shrink: 0;
+}
+.proc-icon {
+    width: 22px;
+    height: 22px;
+    color: #fff;
+}
 </style>
 
 <!-- Google tag (gtag.js) -->
@@ -667,6 +694,21 @@ footer a:hover {
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-WMVRTZM5NJ");</script>
 </head>
 <body>
+
+<!-- SVG Sprite (CULA-62) — see assets/icons/sprite.svg for source -->
+<svg xmlns="http://www.w3.org/2000/svg" style="display:none" aria-hidden="true">
+  <symbol id="icon-sales" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></symbol>
+  <symbol id="icon-support" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 14h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-7a9 9 0 0 1 18 0v7a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3"/></symbol>
+  <symbol id="icon-operations" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 17H5"/><path d="M19 7h-9"/><circle cx="17" cy="17" r="3"/><circle cx="7" cy="7" r="3"/></symbol>
+  <symbol id="icon-backoffice" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect width="8" height="4" x="8" y="2" rx="1" ry="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><path d="M12 11h4"/><path d="M12 16h4"/><path d="M8 11h.01"/><path d="M8 16h.01"/></symbol>
+  <symbol id="icon-finance" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M13.744 17.736a6 6 0 1 1-7.48-7.48"/><path d="M15 6h1v4"/><path d="m6.134 14.768.866-.5 2 3.464"/><circle cx="16" cy="8" r="6"/></symbol>
+  <symbol id="icon-compliance" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></symbol>
+  <symbol id="icon-strategie" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5"/><path d="M9 18h6"/><path d="M10 22h4"/></symbol>
+  <symbol id="icon-blueprint" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="16" y="16" width="6" height="6" rx="1"/><rect x="2" y="16" width="6" height="6" rx="1"/><rect x="9" y="2" width="6" height="6" rx="1"/><path d="M5 16v-3a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v3"/><path d="M12 12V8"/></symbol>
+  <symbol id="icon-umsetzung" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.106-3.105c.32-.322.863-.22.983.218a6 6 0 0 1-8.259 7.057l-7.91 7.91a1 1 0 0 1-2.999-3l7.91-7.91a6 6 0 0 1 7.057-8.259c.438.12.54.662.219.984z"/></symbol>
+  <symbol id="icon-integration" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="18" r="3"/><circle cx="6" cy="6" r="3"/><path d="M6 21V9a9 9 0 0 0 9 9"/></symbol>
+  <symbol id="icon-optimierung" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M16 7h6v6"/><path d="m22 7-8.5 8.5-5-5L2 17"/></symbol>
+</svg>
 
 <header class="navbar"><div class="container">
 <a href="/" class="logo"><img src="assets/logo-ki-agenten.jpg" alt="KI-Agenten.shop Logo" class="logo-img"></a>
@@ -727,23 +769,23 @@ footer a:hover {
 <section><div class="container">
 <h2>KI-Agenten für jede Abteilung</h2>
 <div class="hub-links">
-<a href="/ki-agenten-im-vertrieb/" class="hub-link"><h3>🎯 Vertrieb</h3><p>Lead-Scoring, Angebotsautomatisierung, CRM-Enrichment, Follow-ups</p></a>
-<a href="/ki-agenten-im-kundenservice/" class="hub-link"><h3>🛎️ Kundenservice</h3><p>Ticket-Triage, automatische Antworten, Eskalationslogik</p></a>
-<a href="/ki-agenten-operations/" class="hub-link"><h3>⚙️ Operations</h3><p>Prozessüberwachung, Anomalieerkennung, Report-Generierung</p></a>
-<a href="/ki-agenten-backoffice/" class="hub-link"><h3>📋 Backoffice</h3><p>Rechnungsprüfung, Dokumentenverarbeitung, HR-Prozesse</p></a>
-<a href="/ki-agenten-finance/" class="hub-link"><h3>💰 Finance</h3><p>Zahlungsabgleich, Budget-Monitoring, Compliance-Checks</p></a>
-<a href="/ki-agenten-compliance/" class="hub-link"><h3>🛡️ Compliance</h3><p>DSGVO-Monitoring, Vertragsprüfung, EU AI Act</p></a>
+<a href="/ki-agenten-im-vertrieb/" class="hub-link"><h3><svg class="dept-icon" aria-hidden="true"><use href="#icon-sales"/></svg>Vertrieb</h3><p>Lead-Scoring, Angebotsautomatisierung, CRM-Enrichment, Follow-ups</p></a>
+<a href="/ki-agenten-im-kundenservice/" class="hub-link"><h3><svg class="dept-icon" aria-hidden="true"><use href="#icon-support"/></svg>Kundenservice</h3><p>Ticket-Triage, automatische Antworten, Eskalationslogik</p></a>
+<a href="/ki-agenten-operations/" class="hub-link"><h3><svg class="dept-icon" aria-hidden="true"><use href="#icon-operations"/></svg>Operations</h3><p>Prozessüberwachung, Anomalieerkennung, Report-Generierung</p></a>
+<a href="/ki-agenten-backoffice/" class="hub-link"><h3><svg class="dept-icon" aria-hidden="true"><use href="#icon-backoffice"/></svg>Backoffice</h3><p>Rechnungsprüfung, Dokumentenverarbeitung, HR-Prozesse</p></a>
+<a href="/ki-agenten-finance/" class="hub-link"><h3><svg class="dept-icon" aria-hidden="true"><use href="#icon-finance"/></svg>Finance</h3><p>Zahlungsabgleich, Budget-Monitoring, Compliance-Checks</p></a>
+<a href="/ki-agenten-compliance/" class="hub-link"><h3><svg class="dept-icon" aria-hidden="true"><use href="#icon-compliance"/></svg>Compliance</h3><p>DSGVO-Monitoring, Vertragsprüfung, EU AI Act</p></a>
 </div>
 </div></section>
 
 <section class="section-alt"><div class="container">
 <h2>So bauen wir Ihre Master-KI</h2>
 <div class="steps">
-<div class="step"><span class="num">1</span><h3>Strategie & Zielbild</h3><p>KPIs, Prozesse, Use-Case Priorisierung, Daten- & Risiko-Check.</p></div>
-<div class="step"><span class="num">2</span><h3>Orchestrator-Blueprint</h3><p>Agentenrollen, Tool-Stack, Datenquellen, Freigaben, <a href="/ki-orchestrator-architektur/">Architektur</a>.</p></div>
-<div class="step"><span class="num">3</span><h3>MVP in Produktion</h3><p>1–3 Kernprozesse live. Nicht als Demo, sondern produktiv.</p></div>
-<div class="step"><span class="num">4</span><h3>Integration</h3><p>CRM, ERP, E-Mail, Slack + <a href="/n8n-ki-agenten/">n8n/Make</a> angebunden.</p></div>
-<div class="step"><span class="num">5</span><h3>Optimierung</h3><p><a href="/monitoring-ki-agenten/">Monitoring</a>, Prompt-Tuning, <a href="/kostenkontrolle-ki-workflows/">Kostenkontrolle</a>, Skalierung.</p></div>
+<div class="step"><span class="step-icon"><svg class="proc-icon" aria-hidden="true"><use href="#icon-strategie"/></svg></span><h3>Strategie & Zielbild</h3><p>KPIs, Prozesse, Use-Case Priorisierung, Daten- & Risiko-Check.</p></div>
+<div class="step"><span class="step-icon"><svg class="proc-icon" aria-hidden="true"><use href="#icon-blueprint"/></svg></span><h3>Orchestrator-Blueprint</h3><p>Agentenrollen, Tool-Stack, Datenquellen, Freigaben, <a href="/ki-orchestrator-architektur/">Architektur</a>.</p></div>
+<div class="step"><span class="step-icon"><svg class="proc-icon" aria-hidden="true"><use href="#icon-umsetzung"/></svg></span><h3>MVP in Produktion</h3><p>1–3 Kernprozesse live. Nicht als Demo, sondern produktiv.</p></div>
+<div class="step"><span class="step-icon"><svg class="proc-icon" aria-hidden="true"><use href="#icon-integration"/></svg></span><h3>Integration</h3><p>CRM, ERP, E-Mail, Slack + <a href="/n8n-ki-agenten/">n8n/Make</a> angebunden.</p></div>
+<div class="step"><span class="step-icon"><svg class="proc-icon" aria-hidden="true"><use href="#icon-optimierung"/></svg></span><h3>Optimierung</h3><p><a href="/monitoring-ki-agenten/">Monitoring</a>, Prompt-Tuning, <a href="/kostenkontrolle-ki-workflows/">Kostenkontrolle</a>, Skalierung.</p></div>
 </div>
 </div></section>
 
