@@ -1,0 +1,60 @@
+# KI-Agenten.shop — KI-Orchestrierung für Unternehmen im DACH-Raum
+
+> Culturetek Pte. Ltd. baut KI-Orchestrierungssysteme für Unternehmen im DACH-Raum (50–500 Mitarbeiter). Spezialisiert auf Multi-Agenten-Systeme, DSGVO-konform von Tag 1, NIS2-ready, EU-AI-Act-compliant.
+
+## Services
+- [Kickstart (MVP)](https://ki-agenten.shop/): Erster produktiver KI-Agenten-Stack — auf Anfrage
+- [Scale](https://ki-agenten.shop/): Multi-Agenten-System mit Governance-Layer — auf Anfrage
+- [Enterprise](https://ki-agenten.shop/): Vollständige KI-Orchestrierungsplattform mit SLA — auf Anfrage
+- [KI-Potenzialanalyse](https://ki-agenten.shop/potenzialanalyse/): Kostenlose 15-minütige Potenzialanalyse
+- [Agentic AI Beratung](https://ki-agenten.shop/agentic-ai-beratung/): Strategische KI-Beratung für Unternehmen
+
+## Core Concepts
+- [KI-Orchestrierung](https://ki-agenten.shop/ki-orchestrierung/): Was ist KI-Orchestrierung und warum sie entscheidend ist
+- [Was sind KI-Agenten?](https://ki-agenten.shop/was-sind-ki-agenten/): Grundlagen, Definitionen, Einsatzbereiche
+- [Multi-Agenten-Systeme](https://ki-agenten.shop/multi-agenten-systeme/): Architektur, Frameworks, Enterprise-Deployment
+- [KI-Agenten vs. Chatbots](https://ki-agenten.shop/ki-agenten-vs-chatbots/): Unterschiede und Einsatzgebiete
+- [Agentic AI vs. Workflow Automation](https://ki-agenten.shop/agentic-ai-vs-workflow-automation/): Vergleich und Entscheidungshilfe
+
+## Use Cases by Department
+- [Kundenservice](https://ki-agenten.shop/ki-agenten-im-kundenservice/): Automatisierung von Tier-1-Support
+- [HR & Recruiting](https://ki-agenten.shop/ki-agenten-fuer-hr/): Recruiting, Onboarding, HR-Prozesse
+- [Finance & Controlling](https://ki-agenten.shop/ki-agenten-finance/): Buchhaltung, Reporting, Controlling
+- [Compliance](https://ki-agenten.shop/ki-agenten-compliance/): Compliance-Monitoring, Audit-Trails
+- [Backoffice](https://ki-agenten.shop/ki-agenten-backoffice/): Backoffice-Automatisierung
+- [Operations](https://ki-agenten.shop/ki-agenten-operations/): Operations und Prozessautomatisierung
+- [Research & Wissensmanagement](https://ki-agenten.shop/ki-agenten-research/): Research, Wissensextraktion
+- [CRM-Automatisierung](https://ki-agenten.shop/ki-agenten-crm-automatisierung/): CRM-Integration und -Automatisierung
+- [Angebotserstellung](https://ki-agenten.shop/angebotserstellung-ki-agenten/): KI-gestützte Angebotsprozesse
+
+## Governance & Compliance
+- [DSGVO-konforme KI-Agenten](https://ki-agenten.shop/dsgvo-konforme-ki-agenten/): EU-Datenschutz bei KI-Systemen
+- [Audit Logs & KI-Governance](https://ki-agenten.shop/audit-logs-ki-governance/): Transparenz und Nachvollziehbarkeit
+- [RBAC & Rollenrechte](https://ki-agenten.shop/rbac-rollenrechte-ki/): Zugriffskontrollen in KI-Systemen
+- [Human-in-the-Loop](https://ki-agenten.shop/human-in-the-loop-ki-agenten/): Menschliche Aufsicht in KI-Workflows
+- [Monitoring KI-Agenten](https://ki-agenten.shop/monitoring-ki-agenten/): Betrieb und Überwachung
+
+## Technical Guides
+- [KI-Implementierung: Kosten & ROI 2026](https://ki-agenten.shop/ki-agenten-implementierung-kosten-roi-2026/): Transparente Preisübersicht
+- [ROI berechnen](https://ki-agenten.shop/roi-ki-agenten-berechnen/): ROI-Kalkulator für KI-Agenten
+- [n8n vs. Make für KI-Agenten](https://ki-agenten.shop/n8n-vs-make-ki-agenten/): Tool-Vergleich
+- [n8n für KI-Agenten](https://ki-agenten.shop/n8n-ki-agenten/): Implementierungsguide
+- [On-Premise LLM vs. API](https://ki-agenten.shop/on-premise-llm-vs-api/): Entscheidungsmatrix
+- [Kostenkontrolle KI-Workflows](https://ki-agenten.shop/kostenkontrolle-ki-workflows/): Kostenoptimierung
+- [KI-Automatisierung Guide](https://ki-agenten.shop/ki-automatisierung-guide/): Einstieg in die Automatisierung
+- [Fehler bei KI-Einführung](https://ki-agenten.shop/fehler-einfuehrung-ki-agenten/): Häufige Fehler vermeiden
+- [KI-Glossar](https://ki-agenten.shop/ki-glossar/): Begriffe und Definitionen
+
+## Case Studies
+- [Case Study: Kundenservice](https://ki-agenten.shop/case-study-support/): 50% Tier-1-Tickets automatisiert, CSAT +12
+- [Case Study: Operations](https://ki-agenten.shop/case-study-operations/): Prozessautomatisierung im Betrieb
+- [Case Study: Vertrieb](https://ki-agenten.shop/case-study-vertrieb/): KI-gestützte Vertriebsprozesse
+
+## Company
+- Legal entity: Culturetek Pte. Ltd., Singapore (UEN 202411139W)
+- Primary market: DACH (Deutschland, Österreich, Schweiz)
+- Target segment: Mittelstand & Enterprise (50–500 Mitarbeiter)
+- Compliance: DSGVO-konform, NIS2-ready, EU-AI-Act-compliant
+- Contact: kontakt@ki-agenten.shop
+- About: https://ki-agenten.shop/ueber-uns/
+- Contact form: https://ki-agenten.shop/kontakt/
