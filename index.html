@@ -402,10 +402,11 @@
     --slate-tech: #1A2F44;
     
     /* Signature Colors */
-    --electric-cyan: #22E7F0;
+    --electric-cyan: #1A6374;
     --signal-blue: #26B8F2;
-    --core-azure: #4A86FF;
+    --core-azure: #1A6374;
     --pulse-violet: #7A6CFF;
+    --accent-hover: #145260;
     
     /* Neutrals */
     --soft-white: #F5F7FB;
@@ -508,9 +509,9 @@ nav .nav-cta {
 }
 
 nav .nav-cta:hover {
-    background: #3A76EF;
+    background: #145260;
     transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(74, 134, 255, 0.4);
+    box-shadow: 0 6px 20px rgba(26,99,116,0.4);
 }
 
 /* Mobile Header */
@@ -537,7 +538,7 @@ nav .nav-cta:hover {
     transform: translate(-50%, -50%);
     width: 800px;
     height: 800px;
-    background: radial-gradient(circle, rgba(34, 231, 240, 0.15) 0%, rgba(74, 134, 255, 0.1) 50%, transparent 70%);
+    background: radial-gradient(circle, rgba(26,99,116,0.15) 0%, rgba(26,99,116,0.1) 50%, transparent 70%);
     border-radius: 50%;
     animation: heroGlow 6s ease-in-out infinite;
     z-index: 0;
@@ -616,13 +617,13 @@ nav .nav-cta:hover {
 .btn-primary {
     background: var(--core-azure);
     color: white;
-    box-shadow: 0 6px 20px rgba(74, 134, 255, 0.4);
+    box-shadow: 0 6px 20px rgba(26,99,116,0.4);
 }
 
 .btn-primary:hover {
-    background: #3A76EF;
+    background: #145260;
     transform: translateY(-3px);
-    box-shadow: 0 10px 30px rgba(74, 134, 255, 0.5);
+    box-shadow: 0 10px 30px rgba(26,99,116,0.5);
 }
 
 .btn-secondary {
@@ -732,7 +733,7 @@ blockquote {
 
 .card:hover {
     transform: translateY(-8px);
-    box-shadow: 0 16px 48px rgba(34, 231, 240, 0.15);
+    box-shadow: 0 16px 48px rgba(26,99,116,0.15);
     border-color: var(--electric-cyan);
 }
 
@@ -873,13 +874,13 @@ blockquote {
 
 .pkg.featured {
     border-color: var(--core-azure);
-    box-shadow: 0 8px 32px rgba(74, 134, 255, 0.2);
+    box-shadow: 0 8px 32px rgba(26,99,116,0.2);
     transform: scale(1.05);
 }
 
 .pkg:hover {
     transform: translateY(-6px) scale(1.02);
-    box-shadow: 0 12px 40px rgba(34, 231, 240, 0.15);
+    box-shadow: 0 12px 40px rgba(26,99,116,0.15);
 }
 
 .pkg h3 {
@@ -1037,6 +1038,8 @@ footer a:hover {
 .whatsapp-float:hover {
     transform: scale(1.1);
 }
+
+a:focus-visible,button:focus-visible,.btn:focus-visible{outline:3px solid #1A6374;outline-offset:3px;border-radius:4px}
 </style>
 
 <!-- Google tag (gtag.js) -->
