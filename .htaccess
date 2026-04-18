@@ -1,0 +1,17 @@
+# HSTS — immer setzen, sobald HTTPS aktiv ist
+<IfModule mod_headers.c>
+    Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains"
+</IfModule>
+
+# BEGIN WordPress
+# Die Direktiven zwischen BEGIN/END WordPress werden dynamisch von WordPress generiert.
+# Manuelle Änderungen zwischen diesen Markern werden überschrieben.
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /
+RewriteRule ^index\.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /index.php [L]
+</IfModule>
+# END WordPress
