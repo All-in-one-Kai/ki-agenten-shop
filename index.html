@@ -578,41 +578,77 @@ blockquote {
 footer {
     background: var(--slate-tech);
     color: var(--slate-text);
-    padding: 64px 20px 32px;
+    padding: 0 20px 32px;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-whatsapp-cta {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    background: #25D366;
+    color: #fff;
+    font-weight: 700;
+    font-size: 15px;
+    text-align: center;
+    text-decoration: none;
+    padding: 16px 20px;
+    min-height: 48px;
+    margin-bottom: 48px;
+    transition: background var(--transition-fast);
+    box-sizing: border-box;
+}
+
+.footer-whatsapp-cta:hover {
+    background: #1ebe5d;
+    color: #fff;
 }
 
 .footer-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 40px;
-    margin-bottom: 40px;
+    grid-template-columns: 2fr 3fr 1.5fr;
+    gap: 48px;
+    padding-bottom: 32px;
 }
 
 footer h4 {
-    color: var(--soft-white);
+    color: var(--electric-cyan);
     margin-bottom: 16px;
-    font-size: 16px;
+    font-size: 11px;
     font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
 }
 
 footer a {
-    color: var(--slate-text);
+    color: #CBD5E1;
     text-decoration: none;
-    display: block;
-    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    min-height: 44px;
     font-size: 14px;
+    line-height: 1.4;
     transition: color var(--transition-fast);
 }
 
 footer a:hover {
-    color: var(--electric-cyan);
+    color: #ffffff;
+}
+
+.footer-free-tool {
+    color: #FFD700 !important;
+}
+
+.footer-free-tool:hover {
+    color: #ffe94d !important;
 }
 
 .copyright {
     text-align: center;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
     padding-top: 24px;
+    margin-top: 32px;
     font-size: 13px;
     color: var(--slate-text);
 }
@@ -620,16 +656,24 @@ footer a:hover {
 .copyright a {
     color: var(--slate-text);
     text-decoration: none;
+    display: inline;
+    min-height: auto;
+    line-height: inherit;
 }
 
 .copyright a:hover {
-    color: var(--electric-cyan);
+    color: #ffffff;
 }
 
 /* ===== MOBILE RESPONSIVE ===== */
 @media(max-width:900px) {
     .hub-links, .cards, .packages { grid-template-columns: repeat(2, 1fr); }
     .step { flex: 0 1 calc(50% - 10px); min-width: auto; }
+}
+
+@media(max-width:768px) {
+    .footer-grid { display: block; }
+    .footer-grid > * { margin-bottom: 32px; }
 }
 
 @media(max-width:600px) {
@@ -817,45 +861,43 @@ footer a:hover {
 </div>
 </div></section>
 
-<footer><div class="container">
+<footer>
+<a href="https://wa.me/4917680273971?text=Hallo%2C%20ich%20interessiere%20mich%20f%C3%BCr%20KI-Orchestrierung." class="footer-whatsapp-cta" aria-label="Kontakt per WhatsApp">Direkt zum KI-Experten: Jetzt auf WhatsApp schreiben &#8594;</a>
+<div class="container">
+<nav aria-label="Footer-Navigation">
 <div class="footer-grid">
-<div><h4>KI-Agenten.shop</h4><p style="font-size:14px;color:var(--slate-text)">KI-Orchestrierung für Unternehmen im DACH-Raum. Wir bauen Ihre Master-KI.</p></div>
-<div><h4>Leistungen</h4>
+<div>
+<h4>Leistungen</h4>
 <a href="/ki-orchestrierung/">KI-Orchestrierung</a>
-<a href="/ki-agenten-fuer-unternehmen/">KI-Agenten</a>
-<a href="/multi-agenten-systeme/">Multi-Agenten-Systeme</a>
+<a href="/ki-agenten-fuer-unternehmen/">KI Agenten für Unternehmen</a>
+<a href="/ki-agenten-im-vertrieb/">KI Agenten im Vertrieb</a>
+<a href="/ki-agenten-im-kundenservice/">KI Agenten im Kundenservice</a>
+<a href="/dsgvo-konforme-ki-agenten/">DSGVO-konforme KI Agenten</a>
 <a href="/agentic-ai-beratung/">Agentic AI Beratung</a>
-<a href="/ki-governance-dsgvo/">KI-Governance</a>
-<a href="/ki-optimizer-agentur/">KI-Optimierung</a></div>
-<div><h4>Use Cases</h4>
-<a href="/ki-agenten-im-vertrieb/">Vertrieb</a>
-<a href="/ki-agenten-im-kundenservice/">Kundenservice</a>
-<a href="/ki-agenten-operations/">Operations</a>
-<a href="/ki-agenten-backoffice/">Backoffice</a>
-<a href="/ki-agenten-finance/">Finance</a>
-<a href="/ki-agenten-compliance/">Compliance</a></div>
-<div><h4>Wissen</h4>
-<a href="/was-ist-ki-orchestrator/">Was ist ein KI-Orchestrator?</a>
-<a href="/ki-agenten-vs-chatbots/">KI-Agenten vs. Chatbots</a>
-<a href="/roi-ki-agenten-berechnen/">ROI berechnen</a>
-<a href="/ki-automatisierung-guide/">Automatisierung Guide</a>
-<a href="/fehler-einfuehrung-ki-agenten/">7 Fehler vermeiden</a>
-<a href="/ki-glossar/">KI-Glossar</a></div>
-<div><h4>Vergleiche</h4>
-<a href="/ki-orchestrierung-vs-einzeltools/">Orchestrierung vs. Einzeltools</a>
-<a href="/agentic-ai-vs-workflow-automation/">Agentic AI vs. Automation</a>
-<a href="/ki-orchestrator-vs-rpa/">Orchestrator vs. RPA</a>
-<a href="/n8n-vs-make-ki-agenten/">n8n vs. Make</a>
-<a href="/ki-agentur-vs-inhouse-team/">Agentur vs. Inhouse</a></div>
-<div><h4>Tools & Rechner</h4>
-<a href="/potenzialanalyse/">Potenzialanalyse</a>
-<a href="/roi-rechner/">ROI-Rechner</a>
-<a href="/checkliste-ki-orchestrierung/">Checkliste</a>
-<a href="/blog/">Blog</a>
-<a href="/ueber-uns/">Über uns</a>
-<a href="/kontakt/">Kontakt</a></div>
+<a href="/partner/">Partner werden</a>
 </div>
-<p class="copyright">&copy; 2026 KI-Agenten.shop — Alle Rechte vorbehalten. | <a href="/impressum/">Impressum</a> | <a href="/datenschutz/">Datenschutz</a></p>
+<div>
+<h4>Ressourcen &amp; Tools</h4>
+<a href="/potenzialanalyse/" class="footer-free-tool">&#9733; KI Potenzialanalyse (kostenlos)</a>
+<a href="/roi-rechner/" class="footer-free-tool">&#9733; ROI-Rechner (kostenlos)</a>
+<a href="/blog/">Blog</a>
+<a href="/ki-automatisierung-guide/">KI-Automatisierung Guide</a>
+<a href="/was-kostet-ki-orchestrator/">Was kostet ein KI-Orchestrator?</a>
+<a href="/ki-governance-dsgvo/">KI Governance &amp; DSGVO</a>
+<a href="/was-ist-ki-orchestrator/">Was ist ein KI-Orchestrator?</a>
+<a href="/ki-agenten-roi-rechner-guide/">KI Agenten ROI-Guide</a>
+</div>
+<div>
+<h4>Unternehmen</h4>
+<a href="/ueber-uns/">Über uns</a>
+<a href="/kontakt/">Kontakt</a>
+<a href="/impressum/">Impressum</a>
+<a href="/datenschutz/">Datenschutz</a>
+<a href="/eu-ai-act-unternehmen/">EU AI Act für Unternehmen</a>
+</div>
+</div>
+</nav>
+<p class="copyright">&copy; 2026 KI-Agenten.shop — Alle Rechte vorbehalten.</p>
 </div></footer>
 
 <!-- WhatsApp Float -->
