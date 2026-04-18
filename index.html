@@ -39,6 +39,9 @@
     --font-heading: 'Manrope', sans-serif;
     --font-body: 'Inter', sans-serif;
     
+    /* CTA Brand Token */
+    --color-cta-primary: #2563EB;
+
     /* Transitions */
     --transition-fast: 160ms ease;
     --transition-medium: 220ms ease;
@@ -224,9 +227,41 @@ nav .nav-cta:hover {
     flex-wrap: wrap;
 }
 
+/* Hero CTA group: Primary stacked above secondary text-links */
+.cta-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 48px;
+}
+
+.cta-secondary-row {
+    display: flex;
+    gap: 24px;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.cta-secondary-link {
+    font-family: var(--font-body);
+    font-size: 14px;
+    font-weight: 400;
+    color: #6B7280;
+    text-decoration: none;
+    transition: color var(--transition-fast);
+}
+
+.cta-secondary-link:hover,
+.cta-secondary-link:focus {
+    color: #374151;
+    text-decoration: underline;
+}
+
 .btn {
-    padding: 16px 32px;
-    border-radius: 14px;
+    padding: 14px 28px;
+    border-radius: 6px;
     text-decoration: none;
     font-weight: 600;
     display: inline-block;
@@ -234,18 +269,20 @@ nav .nav-cta:hover {
     transition: all var(--transition-medium);
     border: none;
     cursor: pointer;
+    min-width: 260px;
+    text-align: center;
 }
 
 .btn-primary {
-    background: var(--core-azure);
-    color: white;
-    box-shadow: 0 6px 20px rgba(74, 134, 255, 0.4);
+    background: var(--color-cta-primary);
+    color: #FFFFFF;
 }
 
-.btn-primary:hover {
-    background: #3A76EF;
-    transform: translateY(-3px);
-    box-shadow: 0 10px 30px rgba(74, 134, 255, 0.5);
+.btn-primary:hover,
+.btn-primary:focus {
+    background: #1d4ed8;
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.35);
+    outline: none;
 }
 
 .btn-secondary {
@@ -283,6 +320,16 @@ nav .nav-cta:hover {
     .hero .subline { font-size: 18px; }
     .hero-logo { width: 150px; }
     .cta-buttons { flex-direction: column; align-items: center; }
+    .cta-group .btn-primary {
+        width: 100%;
+        min-width: unset;
+        padding: 16px 28px;
+    }
+    .cta-secondary-row {
+        flex-direction: column;
+        gap: 12px;
+        align-items: center;
+    }
 }
 
 /* ===== SECTIONS ===== */
@@ -688,10 +735,12 @@ footer a:hover {
 <img src="assets/logo-ki-agenten.jpg" alt="KI-Agenten.shop" class="hero-logo">
 <p class="subline">Wir bauen Ihre Master-KI, die Agenten, Tools und Prozesse zentral steuert — DSGVO-konform, skalierbar und messbar.</p>
 
-<div class="cta-buttons">
-<a href="/potenzialanalyse/" class="btn btn-primary">Kostenlose KI-Potenzialanalyse</a>
-<a href="/build-your-orchestrator.html" class="btn btn-secondary">Shop durchstöbern</a>
-<a href="/roi-rechner/" class="btn btn-secondary" style="border-color:#ffd700;color:#ffd700">🧮 ROI in 60 Sekunden berechnen</a>
+<div class="cta-group">
+<a href="/potenzialanalyse/" class="btn btn-primary">Kostenlose KI-Potenzialanalyse &#x2192;</a>
+<div class="cta-secondary-row">
+<a href="/roi-rechner/" class="cta-secondary-link">ROI-Rechner &#x2192;</a>
+<a href="/build-your-orchestrator.html" class="cta-secondary-link">Shop durchstöbern &#x2192;</a>
+</div>
 </div>
 <div class="trust-row">
 <span>✓ Für Mittelstand & Enterprise</span>
