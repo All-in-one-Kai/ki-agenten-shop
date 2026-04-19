@@ -201,10 +201,6 @@ input,select,textarea{background:#152435!important;color:#F5F7FB!important;borde
 </div></footer>
 
 <script>
-// CULA-125: replace placeholders with real values before deploying
-var BREVO_API_KEY = "YOUR_BREVO_API_KEY";
-var BREVO_LIST_ID = 0; // numeric list ID for Newsletter-Abonnenten in Brevo
-
 var emailCaptureShown = false;
 
 function fmt(n){return n.toLocaleString("de-DE",{style:"currency",currency:"EUR",maximumFractionDigits:0})}
@@ -258,17 +254,16 @@ function submitEmailCapture(e){
   btn.textContent="Wird gesendet\u2026";
   errEl.style.display="none";
 
-  var payload={email:email,listIds:[BREVO_LIST_ID],updateEnabled:true,attributes:{}};
-  if(vorname)payload.attributes.FIRSTNAME=vorname;
+  var payload={email:email,firstname:vorname};
 
-  fetch("https://api.brevo.com/v3/contacts",{
+  fetch("/roi-rechner/subscribe.php",{
     method:"POST",
-    headers:{"accept":"application/json","content-type":"application/json","api-key":BREVO_API_KEY},
+    headers:{"content-type":"application/json"},
     body:JSON.stringify(payload)
   })
   .then(function(r){
-    if(!r.ok&&r.status!==204)return r.json().then(function(d){throw d;});
-    return r;
+    if(!r.ok)throw new Error(r.status);
+    return r.json();
   })
   .then(function(){
     document.getElementById("roi-capture-form").style.display="none";
