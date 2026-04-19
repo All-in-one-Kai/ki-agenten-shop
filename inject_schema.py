@@ -43,7 +43,8 @@ ORGANIZATION = {
     "areaServed": ["DE", "AT", "CH"]
   },
   "sameAs": [
-    "https://www.linkedin.com/company/ai-in-life/"
+    "https://www.linkedin.com/company/ai-in-life/",
+    "https://x.com/Kaiseinleben"
   ],
   "knowsAbout": [
     "KI-Orchestrierung",
