@@ -42,10 +42,6 @@ ORGANIZATION = {
     "availableLanguage": ["German", "English"],
     "areaServed": ["DE", "AT", "CH"]
   },
-  "sameAs": [
-    "PLACEHOLDER_LINKEDIN_URL",
-    "PLACEHOLDER_CRUNCHBASE_URL"
-  ],
   "knowsAbout": [
     "KI-Orchestrierung",
     "Multi-Agent-Systeme",
