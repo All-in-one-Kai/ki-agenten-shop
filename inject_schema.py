@@ -42,6 +42,9 @@ ORGANIZATION = {
     "availableLanguage": ["German", "English"],
     "areaServed": ["DE", "AT", "CH"]
   },
+  "sameAs": [
+    "https://www.linkedin.com/company/ai-in-life/"
+  ],
   "knowsAbout": [
     "KI-Orchestrierung",
     "Multi-Agent-Systeme",
