@@ -217,16 +217,56 @@
         </div>
         
         <div class="article-content">
-            <p><strong>This blog article has been restored with proper header navigation and CSS scoping.</strong></p>
-            <p>The layout now maintains consistency with the main site while preventing CSS conflicts between header navigation and blog content.</p>
-            <p>Key improvements implemented:</p>
+            <p>Compliance-Abteilungen im DACH-Mittelstand arbeiten heute überwiegend <em>reaktiv</em>: periodische Audits, Stichproben, manuelle Policy-Prüfungen. Das passt nicht mehr zu einer Regulierungsdichte, die jedes Quartal wächst — DSGVO, EU AI Act, NIS2, Whistleblower-Richtlinie, Lieferkettengesetz. KI-Agenten verschieben das Modell von periodischer Stichprobe zu kontinuierlichem Monitoring: automatisiert, auditierbar, in vorhandene Systeme integriert.</p>
+
+            <h2>Das Problem periodischer Audits</h2>
+            <p>Ein typischer Compliance-Audit deckt einen Stichtag ab. Zwischen zwei Audits entstehen Lücken, die erst bei der nächsten Prüfung sichtbar werden — oder bei einer Meldung aus dem Unternehmen. Verträge werden geändert, neue Dienstleister aufgenommen, Datenflüsse verlegt, ohne dass die Compliance-Funktion es zeitnah mitbekommt. Wenn etwas auffällt, ist der Zustand oft seit Monaten aktiv. Bußgelder nach Art. 83 DSGVO orientieren sich am Jahresumsatz, nicht an der Schwere des Einzelfalls — ein blind spot ist teuer.</p>
+
+            <h2>Konkrete Anwendungen</h2>
+
+            <h3>DSGVO-Monitoring</h3>
+            <p>Ein Compliance-Agent überwacht Datenflüsse über angebundene Systeme (CRM, Ticketing, Mail, ERP), klassifiziert Verarbeitungen nach Art. 30 DSGVO und alarmiert bei Abweichungen vom Verzeichnis der Verarbeitungstätigkeiten. Typische Fundstellen: neue SaaS-Tools ohne DPA, Auftragsverarbeiter außerhalb der EU ohne Standardvertragsklauseln, fehlende Löschfristen in Ticket-Systemen.</p>
+
+            <h3>Vertragsprüfung</h3>
+            <p>Eingehende Verträge (AVV, NDA, Rahmenverträge) werden gegen eine Policy-Vorlage geprüft. Der Agent markiert Klauseln, die von der Policy abweichen — etwa Haftungsbegrenzungen unter Standardniveau, fehlende Audit-Rechte, US-Jurisdiktionsklauseln. Kein automatisches Abschließen, sondern strukturierte Vorlage zur menschlichen Freigabe.</p>
+
+            <h3>Policy-Checks auf Prozessebene</h3>
+            <p>Freigaben (z.B. Spesenabrechnungen ab einer Schwelle, neue Lieferanten, Zugriffsrechte auf kritische Systeme) werden gegen interne Policies geprüft, bevor sie durchgereicht werden. Der Agent liefert Kontext für die entscheidende Person — welche Regel einschlägig ist, wo der Grenzfall liegt, welche Präzedenz existiert.</p>
+
+            <h2>Architektur: Human-in-the-Loop bleibt</h2>
+            <p>Compliance-Agenten treffen keine Entscheidungen mit rechtlicher Bindungswirkung — sie strukturieren, filtern, alarmieren. Die finale Freigabe liegt bei der Compliance-/Rechtsabteilung. Das ist nicht nur ein rechtlicher Reflex (Art. 22 DSGVO zu automatisierten Einzelentscheidungen, Art. 14 EU AI Act zu Hochrisiko-Systemen), sondern auch operativ sinnvoll: ein Agent, der 80% des Routine-Volumens vorstrukturiert, gibt einer Compliance-Funktion von 2–3 Personen die Kapazität zurück, die 20% Grenzfälle wirklich zu durchdenken.</p>
+
+            <h2>Rechtlicher Rahmen</h2>
+            <p>Compliance-Agenten bewegen sich in einem eigenen Regulierungsraum:</p>
             <ul>
-                <li>✅ Protected header logo sizing (40px width)</li>
-                <li>✅ Complete navigation menu with all 9 items</li>
-                <li>✅ CSS scoping to prevent style collisions</li>
-                <li>✅ Mobile-responsive design</li>
-                <li>✅ Consistent branding with main portal</li>
+                <li><strong>DSGVO</strong> — die Verarbeitung der überwachten Daten braucht eine Rechtsgrundlage (meist Art. 6 Abs. 1 lit. f — berechtigtes Interesse) und muss im Verzeichnis der Verarbeitungstätigkeiten stehen.</li>
+                <li><strong>EU AI Act (VO 2024/1689)</strong> — Einsatz im Compliance-Bereich kann in den Hochrisiko-Bereich fallen, wenn Entscheidungen über Beschäftigte oder Rechte getroffen werden. Human-Oversight (Art. 14), Logging (Art. 12) und Risikomanagement-System (Art. 9) sind dann Pflicht.</li>
+                <li><strong>NIS2 (EU 2022/2555)</strong> — die Compliance-Systeme selbst sind kritische Infrastruktur: Zugriffskontrolle, Incident-Response-Prozess, 24h-Meldepflicht.</li>
+                <li><strong>Datenminimierung</strong> — nur die für die Compliance-Prüfung erforderlichen Datenfelder werden verarbeitet. Das ist auch technisch: der Agent läuft möglichst nah an den Quellsystemen, nicht in einer separaten Daten-Sammelstelle.</li>
             </ul>
+
+            <h2>Implementierung in vier Schritten</h2>
+            <ol>
+                <li><strong>Use-Case-Priorisierung:</strong> Welcher Compliance-Bereich hat den größten blind spot? Meist DSGVO-Monitoring oder Vertragsprüfung — beide sind hochfrequent und schwer manuell lückenlos zu machen.</li>
+                <li><strong>Policy-Inventur:</strong> Agenten brauchen eine durchsuchbare Wissensbasis. Verstreute Policies auf Sharepoint/Intranet werden konsolidiert und versioniert. Oft der langsamste Schritt — aber er liefert auch ohne KI schon Wert.</li>
+                <li><strong>MVP auf einem Prozess:</strong> Ein Agent, ein Prozess, messbare Baseline (Anzahl manuell erkannte Abweichungen vor Einsatz vs. nachher). Läuft typischerweise 4–6 Wochen bis produktiv.</li>
+                <li><strong>Skalierung mit Governance-Struktur:</strong> Agenten-Register, Audit-Log-Retention, regelmäßige Review der Agent-Outputs. Wer in die Compliance-Funktion einen Agenten einführt, trägt selbst Compliance-Pflichten — das ist keine Ironie, sondern Teil des Modells.</li>
+            </ol>
+
+            <h2>Was Compliance-Agenten nicht leisten</h2>
+            <p>Keine Rechtsberatung im Einzelfall. Keine Abnahme von Verantwortung. Kein Ersatz für Legal Counsel bei strittigen Fällen. Ein Agent strukturiert Routine und macht Grenzfälle sichtbar — die Bewertung bleibt bei qualifizierten Personen. Wer das verwechselt, landet schnell bei der ersten Abmahnung eines Aufsichtsbehördenschreibens, das eine Rechtsfrage stellt, die der Agent nicht beantworten kann.</p>
+
+            <h2>Key Takeaways</h2>
+            <ol>
+                <li>Kontinuierliches Monitoring schließt die Lücke zwischen periodischen Audits — besonders dort, wo Bußgelder am Jahresumsatz bemessen werden.</li>
+                <li>Typische Einstiege: DSGVO-Monitoring, Vertragsprüfung, Policy-Checks bei Freigabeprozessen.</li>
+                <li>Human-in-the-Loop ist nicht optional — rechtlich (Art. 14 AI Act, Art. 22 DSGVO) und operativ.</li>
+                <li>Der langsamste Schritt ist meist die Policy-Inventur — die aber auch ohne KI Wert liefert.</li>
+                <li>Wer Compliance-Agenten einführt, muss sie selbst in die Compliance-Governance integrieren.</li>
+            </ol>
+
+            <h2>Nächster Schritt</h2>
+            <p>In der kostenlosen KI-Potenzialanalyse prüfen wir in 15 Minuten, welcher Compliance-Prozess in Ihrem Unternehmen den größten blind spot hat — und ob ein Agent dort tatsächlich Hebel setzt. <a href="/potenzialanalyse/">Potenzialanalyse starten →</a></p>
         </div>
     </main>
 </body>
